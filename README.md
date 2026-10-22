@@ -26,7 +26,7 @@ The goal of this project is to explore how natural language processing (NLP) and
 - **Medical Question Answering:** Generates responses to medical questions using a fine-tuned BioGPT model.
 - **Text-Based Interaction:** Allows users to enter health-related questions through a chatbot interface.
 - **Voice Input:** Converts spoken questions into text using OpenAI Whisper.
-- **Interactive Interface:** Provides a user-friendly chatbot application built with Gradio.
+- **Interactive Interface:** Provides a chatbot application built with Gradio.
 - **User Profile Interface:** Includes a basic user profile and demonstration login interface.
 - **Chat History:** Supports viewing recent conversations.
 - **Model Fine-Tuning:** Uses the MedQuAD dataset to adapt BioGPT for medical question answering.
@@ -37,8 +37,9 @@ The goal of this project is to explore how natural language processing (NLP) and
 - `MedGPT.ipynb` — Main implementation, model fine-tuning, evaluation, and chatbot application code.
 - `MedGPT_Report.pdf` — Detailed project report, including methodology, implementation, and results.
 - `MedGPT_Demo.mp4` — Video demonstration of the MedGPT chatbot.
-- `README.md` — Project overview, features, technologies, and instructions.
-- `.gitignore` — Specifies files and folders excluded from Git tracking.
+- `requirements.txt` — Python dependencies required for the project.
+- `README.md` — Project documentation and instructions.
+- `.gitignore` — Files and directories excluded from Git tracking.
 
 ## Dataset
 
@@ -63,7 +64,16 @@ The CSV contains the following columns:
 4. Place `medquad.csv` in the notebook's working directory.
 5. Run `MedGPT.ipynb`.
 
-**Note:** The processed CSV is not included in this repository and is excluded using `.gitignore`. The XML-to-CSV conversion script is not currently provided, so the preparation process must be completed separately.
+**Note:** The processed CSV is not included in this repository and is excluded using `.gitignore`. The XML-to-CSV conversion script is not currently provided, so dataset preparation must be completed separately.
+
+## How to Run the Project
+
+### 1. Clone the Repository
+
+Open a terminal and run:
+
+```bash
+git clone https://github.com/AfrinHossai/MedGPT-Medical-Chatbot.git
 ```
 
 ### 2. Open the Project
@@ -86,11 +96,13 @@ python -m pip install -r requirements.txt
 
 The project uses PyTorch, Hugging Face Transformers, Microsoft BioGPT, OpenAI Whisper, and Gradio.
 
-**Note:** OpenAI Whisper also requires FFmpeg for audio processing. Additional setup may be needed depending on your operating system and hardware.
+**Note:** OpenAI Whisper also requires FFmpeg for audio processing. Additional setup may be needed depending on your operating system and hardware. The dependency versions have not been pinned or validated in a fresh environment.
 
 ### 4. Prepare the Dataset
 
-Download and prepare the MedQuAD dataset, then provide the expected `medquad.csv` file in the location referenced by the notebook.
+Follow the instructions in the **Dataset Setup** section above.
+
+Make sure the `medquad.csv` file is available in the notebook's working directory before running the dataset-loading cells.
 
 ### 5. Run the Notebook
 
@@ -104,15 +116,15 @@ Execute the notebook cells in sequence to:
 
 Model training may require GPU acceleration and sufficient memory.
 
-The repository does not include pretrained fine-tuned checkpoints, so users may need to complete training before testing the chatbot.
+The repository does not include fine-tuned model checkpoints, so users may need to complete training before testing the chatbot.
 
 ## Project Demonstration
 
-A video demonstration of the chatbot is available in:
+A video demonstration of the chatbot is available here:
 
 **[Watch MedGPT Demo](MedGPT_Demo.mp4)**
 
-The demonstration showcases the user interface and chatbot functionality.
+The demonstration showcases the chatbot's user interface and functionality.
 
 ## Project Report
 
@@ -127,6 +139,7 @@ For detailed information about the methodology, implementation, and results, see
 - The application is an academic prototype, not a clinically validated medical system.
 - The demonstration login interface does not provide secure authentication.
 - Dataset preparation and model training may be necessary before running the application.
+- The full installation and execution workflow has not been independently verified in a clean environment.
 
 ## Future Improvements
 
@@ -135,6 +148,8 @@ For detailed information about the methodology, implementation, and results, see
 - Expand voice-based interaction capabilities.
 - Implement secure user authentication.
 - Improve evaluation using additional medical question-answering benchmarks.
+- Provide an automated dataset preparation script.
+- Pin and test dependency versions for reproducibility.
 - Deploy the chatbot as an accessible web application.
 
 ## Medical Disclaimer
