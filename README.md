@@ -42,20 +42,28 @@ The goal of this project is to explore how natural language processing (NLP) and
 
 ## Dataset
 
-This project uses the **MedQuAD (Medical Question Answering Dataset)**, which contains medical questions and answers collected from trusted health information sources.
+This project uses the **MedQuAD (Medical Question Answering Dataset)** to fine-tune BioGPT for medical question answering.
 
-The dataset is used to fine-tune BioGPT for generating responses to medical questions.
+**Original dataset:** [MedQuAD — GitHub](https://github.com/abachaa/MedQuAD)
 
-**Dataset Source:** [MedQuAD — GitHub](https://github.com/abachaa/MedQuAD)
+The project uses a processed CSV file named `medquad.csv` containing 16,412 question-answer records.
 
-**Note:** The notebook references `medquad.csv`, which is not included in this repository. Users must obtain and prepare the dataset in the expected format before running the notebook.
+The CSV contains the following columns:
 
-## How to Run the Project
+- `question` — Medical questions.
+- `answer` — Corresponding medical answers.
+- `source` — Source information.
+- `focus_area` — Medical topic or focus area.
 
-### 1. Clone the Repository
+### Dataset Setup
 
-```bash
-git clone https://github.com/AfrinHossai/MedGPT-Medical-Chatbot.git
+1. Obtain the original MedQuAD dataset from the GitHub link above.
+2. Convert the original XML question-answer records into CSV format with the columns `question`, `answer`, `source`, and `focus_area`.
+3. Save the processed CSV as `medquad.csv`.
+4. Place `medquad.csv` in the notebook's working directory.
+5. Run `MedGPT.ipynb`.
+
+**Note:** The processed CSV is not included in this repository and is excluded using `.gitignore`. The XML-to-CSV conversion script is not currently provided, so the preparation process must be completed separately.
 ```
 
 ### 2. Open the Project
