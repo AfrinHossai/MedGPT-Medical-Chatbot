@@ -1,0 +1,11 @@
+torch
+transformers
+datasets
+accelerate
+evaluate
+sacremoses
+pyarrow
+pandas
+matplotlib
+gradio
+openai-whisper
