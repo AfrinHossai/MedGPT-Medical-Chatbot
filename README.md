@@ -70,13 +70,15 @@ Open `MedGPT.ipynb` using Jupyter Notebook or Google Colab.
 
 ### 3. Install Dependencies
 
-Install the Python libraries required by the notebook:
+Install the required Python libraries using:
 
 ```bash
-pip install torch transformers datasets pandas matplotlib gradio openai-whisper
+python -m pip install -r requirements.txt
 ```
 
-Additional dependencies may be required depending on the execution environment and notebook configuration.
+The project uses PyTorch, Hugging Face Transformers, Microsoft BioGPT, OpenAI Whisper, and Gradio.
+
+**Note:** OpenAI Whisper also requires FFmpeg for audio processing. Additional setup may be needed depending on your operating system and hardware.
 
 ### 4. Prepare the Dataset
 
